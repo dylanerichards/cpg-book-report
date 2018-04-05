@@ -1,12 +1,5 @@
 <h1>All Books</h1>
 
-<%= link_to "View Report", report_path %>
-
-<br />
-
-<%= link_to "++ New Book ++", new_book_path %>
-
-
 <% @books.each do |book| %>
   <h2><%= link_to book.title, book %></h2>
 <% end %>
