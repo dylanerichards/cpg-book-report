@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Find the application live at [cpg-book-report.com](https://www.cpg-book-report.com)
 
-Things you may want to cover:
+## Starting the Application
 
-* Ruby version
+- clone the repository and `cd` into it
+- install the dependencies by running `bundle`
+- start the application by running `rails server`
 
-* System dependencies
+## Running the Tests
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- run `rspec`
