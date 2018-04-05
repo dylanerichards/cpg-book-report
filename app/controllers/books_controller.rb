@@ -62,17 +62,10 @@ class BooksController < ApplicationController
 
   def assign_authors(book)
     authors = author_params.map { |id| Author.find(id) }
+    authors.each { |author| Authorship.create(book_id: book.id, author_id: author.id) if !book.authors.include?(author) }
 
     unselected_authors = Author.all - authors
-
-    unselected_authors.each do |author|
-      authorship = Authorship.where(book_id: book.id, author_id: author.id)
-      authorship.destroy_all
-    end
-
-    authors.each do |author|
-      authorship = Authorship.create(book_id: book.id, author_id: author.id) if !book.authors.include?(author)
-    end
+    unselected_authors.each { |author| Authorship.where(book_id: book.id, author_id: author.id).destroy_all }
 
     book.save
   end
