@@ -1,0 +1,35 @@
+<h1>Edit book</h1>
+
+<%= form_with(model: @book) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :authors %>
+    <%= f.collection_select(:authors, Author.all, :id, :name, { :prompt => "Select the author(s)" }, { :multiple => true }) %>
+  </div>
+
+  <div>
+    <%= f.label :format %>
+    <%= f.collection_select :format, Format.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= f.label :base_price %>
+    <%= f.text_field :base_price %>
+  </div>
+
+  <div>
+    <%= f.label :release_date %>
+    <%= f.text_field :release_date  %>
+  </div>
+
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Back to books", books_path %>

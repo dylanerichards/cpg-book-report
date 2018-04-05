@@ -1,0 +1,11 @@
+<p><strong>Title: </strong><%= @book.title %></p>
+<p><strong>Authors: </strong><%= @book.authors.map(&:name).join(", ") %></p>
+<p><strong>Format: </strong><%= @book.format.name %></p>
+<p><strong>Release Date: </strong><%= @book.release_date %></p>
+<p><strong>Base price: </strong><%= number_to_currency(@book.base_price) %></p>
+
+<%= link_to "Edit this book's info", edit_book_path(@book) %>
+
+<br />
+
+<%= link_to "See all books", root_path %>

@@ -5,9 +5,6 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.date :release_date
       t.decimal :base_price
       t.integer :format_id
-      t.text :author_ids, array: true, default: []
-
-
 
       t.timestamps
     end
