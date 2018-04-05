@@ -8,7 +8,7 @@
 
   <div>
     <%= f.label :authors %>
-    <%= f.collection_select(:authors, Author.all, :id, :name, { :prompt => "Select the author(s)" }, { :multiple => true }) %>
+    <%= f.collection_select(:authors, Author.all, :id, :name, { :prompt => "Select the author(s)" }, { :multiple => true, class: "author-select" }) %>
   </div>
 
   <div>
@@ -28,7 +28,7 @@
 
 
   <div>
-    <%= f.submit %>
+    <%= f.submit "Update Book", class: "button" %>
   </div>
 <% end %>
 

@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap-datepicker
  */
 
-@import "bootstrap";
+@import "foundation_and_overrides";
+
+.author-select {
+  height: 100px;
+}

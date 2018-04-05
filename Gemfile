@@ -56,7 +56,9 @@ end
 
 gem "rails-controller-testing"
 gem 'bootstrap-datepicker-rails'
-gem 'bootstrap'
+
+gem 'foundation-rails'
+gem 'autoprefixer-rails'
 
 group :test do
   gem "rspec-rails"

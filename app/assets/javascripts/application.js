@@ -12,13 +12,12 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
+//= require foundation
 //= require bootstrap-datepicker
-//= require popper
-//= require bootstrap
 //= require_tree .
 
 $(document).ready(function(){
+  $(document).foundation();
 
   $('.datepicker').datepicker({
     todayHighlight: true, 
