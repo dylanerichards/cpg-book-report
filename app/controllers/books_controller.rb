@@ -56,8 +56,7 @@ class BooksController < ApplicationController
   private
 
   def parse_release_date
-    release_date_param = book_params[:release_date]
-    date = Date.strptime(release_date_param, "%m/%d/%Y")
+    Date.strptime(book_params[:release_date], "%m/%d/%Y")
   end
 
   def assign_authors(book)
