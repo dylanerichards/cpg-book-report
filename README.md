@@ -5,6 +5,7 @@ Find the application live at [cpg-book-report.com](https://www.cpg-book-report.c
 - clone the repository and `cd` into it
 - install the dependencies by running `bundle`
 - run the migrations: `rake db:migrate`
+- seed the database: `rake db:seed`
 - start the application by running `rails server`
 
 ## Running the Tests
