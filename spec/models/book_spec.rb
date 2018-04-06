@@ -39,7 +39,7 @@ describe Book  do
 
     it 'returns all the hardcover books released in 2018' do
       book1 = Book.create(title: "Hardcover", release_date: 1.months.from_now, base_price: 1.00, format: hardcover)
-      book2 = Book.create(title: "Softcover", release_date: 1.months.from_now, base_price: 1.00, format: softcover)
+      book2 = Book.create(title: "Hardcover", release_date: 300.months.from_now, base_price: 1.00, format: softcover)
 
       expect(Book.hardcover_from_2018).to eq [book1]
     end
