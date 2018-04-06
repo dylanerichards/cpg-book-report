@@ -21,9 +21,10 @@ $(document).ready(function(){
   $(document).foundation();
 
   $('.datepicker').datepicker({
-    todayHighlight: true, 
-    orientation: 'auto top', 
-    format: 'mm/dd/yyyy'
+    todayHighlight: true,
+    orientation: 'auto top',
+    format: 'mm/dd/yyyy',
   });
+
 
 });
